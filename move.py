@@ -21,14 +21,16 @@ for image in csvreader:
 
 for i in range (3):
     print (images[i])
-    
-list = os.listdir("256x256_NormalizedWhaleImages")
+
+mainPath = "test_images_100"
+
+list = os.listdir(mainPath)
     
 for file in list:
-    path = os.path.join("256x256_NormalizedWhaleImages", species[images.index(file)])
-    if (species[images.index(file)] not in os.listdir("256x256_NormalizedWhaleImages")):        
+    path = os.path.join(mainPath, species[images.index(file)])
+    if (species[images.index(file)] not in os.listdir(mainPath)):        
         os.makedirs(path)
     
-    currPath = os.path.join("256x256_NormalizedWhaleImages", file)
+    currPath = os.path.join(mainPath, file)
     shutil.move(currPath, path)
     
