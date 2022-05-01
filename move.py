@@ -22,7 +22,7 @@ for image in csvreader:
 for i in range (3):
     print (images[i])
 
-mainPath = "test_images_100"
+mainPath = "256x256_NormGreyScaleWhaleImages"
 
 list = os.listdir(mainPath)
     
